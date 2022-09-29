@@ -20,3 +20,6 @@ services:
       - SONAR_FORCEAUTHENTICATION=false
 networks:
   mynetwork: # end of docker-compose.yml
+
+# https://github.com/BlockEmpire
+# Name : benny yuen 
