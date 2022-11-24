@@ -1,0 +1,25 @@
+# start of docker-compose.yml
+version: "3"
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    volumes:
+      - /opt/jenkins_home:/var/jenkins_home
+    ports:
+      - 8080:8080
+    networks:
+      - mynetwork
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - 9000:9000
+    networks:
+      - mynetwork
+    environment:
+      # not recommended for production environment
+      - SONAR_FORCEAUTHENTICATION=false
+networks:
+  mynetwork: # end of docker-compose.yml
+
+# https://github.com/BlockEmpire
+# Name : benny yuen 
